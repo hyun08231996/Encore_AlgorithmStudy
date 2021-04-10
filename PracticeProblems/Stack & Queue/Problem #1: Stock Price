@@ -17,6 +17,7 @@ prices	        return
 5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.
 
 Solution
+```java
 class Solution {
     public int[] solution(int[] prices) {
         int[] answer = {};
@@ -41,3 +42,4 @@ class Solution {
         return answer;
     }
 }
+```
