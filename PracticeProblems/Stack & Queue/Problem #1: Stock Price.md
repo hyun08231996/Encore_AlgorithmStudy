@@ -48,5 +48,4 @@ class Solution {
 }
 ```
 
-#### Reference Link
-https://programmers.co.kr/learn/courses/30/lessons/42584
+#### Reference Link: https://programmers.co.kr/learn/courses/30/lessons/42584
