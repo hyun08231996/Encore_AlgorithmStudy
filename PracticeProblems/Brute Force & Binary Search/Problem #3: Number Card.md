@@ -26,6 +26,85 @@
 
 ### Solution
 ```java
+import java.util.*;
+import java.io.*;
+
+public class Solution{
+
+     public static int binarySearch(int num, int[] arr){
+         int left = 0;
+         int right = arr.length-1;
+         int cnt = 0;
+         boolean flag = false;
+         
+         while(right>=left){
+             int mid = (left+right) / 2;
+             
+             if(arr[mid] == num){
+                 flag = true;
+             }
+             
+             if(num>arr[mid]){
+                 left = mid + 1;
+                 
+             }else if(num<arr[mid]){
+                 right = mid - 1;
+             }
+         }
+         
+         if(flag == true){
+             for(int i=0; i<arr.length; i++){
+                 if(arr[i]==num){
+                     cnt++;
+                 }
+             }
+         }
+         
+         return cnt;
+     }
+     
+     public static void main(String []args) throws Exception {
+         
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		ArrayList<String> list = new ArrayList<>();
+		String line = null;
+		while((line=br.readLine())!=null){
+		    list.add(line);
+		}
+		int m = Integer.parseInt(list.get(0));
+		int[] mArr = new int[m];
+		String[] mStr = new String[m];
+		for(int i=0; i<m; i++){
+		    mStr[i] = (list.get(1)).toString.split(" ");
+		}
+		for(int i=0; i<m; i++){
+		    mArr[i] = Integer.parseInt(mStr[i]);
+		}
+		
+		Arrays.sort(mArr);
+		
+		int n = Integer.parseInt(list.get(2));
+		int[] nArr = new int[n];
+		String[] nStr = new String[n];
+		for(int i=0; i<n; i++){
+		    nStr[i] = (list.get(3)).split(" ");
+		}
+		for(int i=0; i<n; i++){
+		    nArr[i] = Integer.parseInt(nStr[i]);
+		}
+		
+		int[] answer = new int[n];
+		for(int i=0; i<n; i++){
+		    answer[i] = binarySearch(nArr[i], mArr);
+		    bw.append(answer[i]+" ");
+		}
+		
+		
+		bw.close();
+		br.close();
+     }
+}
 
 ```
 
