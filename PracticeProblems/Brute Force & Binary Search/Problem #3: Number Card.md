@@ -100,6 +100,6 @@ public class Main{
      }
 }
 ```
-*Timeout Error* `#f03c15`
+*Timeout Error*
 
 #### Reference Link: https://www.acmicpc.net/problem/10816
