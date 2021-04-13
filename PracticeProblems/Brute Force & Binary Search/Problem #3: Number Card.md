@@ -29,7 +29,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Solution{
+public class Main{
 
      public static int binarySearch(int num, int[] arr){
          int left = 0;
@@ -74,10 +74,7 @@ public class Solution{
 		}
 		int m = Integer.parseInt(list.get(0));
 		int[] mArr = new int[m];
-		String[] mStr = new String[m];
-		for(int i=0; i<m; i++){
-		    mStr[i] = (list.get(1)).toString.split(" ");
-		}
+		String[] mStr = (list.get(1)).split(" ");
 		for(int i=0; i<m; i++){
 		    mArr[i] = Integer.parseInt(mStr[i]);
 		}
@@ -86,10 +83,7 @@ public class Solution{
 		
 		int n = Integer.parseInt(list.get(2));
 		int[] nArr = new int[n];
-		String[] nStr = new String[n];
-		for(int i=0; i<n; i++){
-		    nStr[i] = (list.get(3)).split(" ");
-		}
+		String[] nStr = (list.get(3)).split(" ");
 		for(int i=0; i<n; i++){
 		    nArr[i] = Integer.parseInt(nStr[i]);
 		}
@@ -100,12 +94,12 @@ public class Solution{
 		    bw.append(answer[i]+" ");
 		}
 		
-		
+		bw.flush();
 		bw.close();
 		br.close();
      }
 }
-
 ```
+*Timeout Error* `#f03c15`
 
 #### Reference Link: https://www.acmicpc.net/problem/10816
